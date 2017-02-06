@@ -56,4 +56,12 @@ public class Graph {
 		 edges.add(new Edge(a,b));
 	}
 	
+	public Vertex getLastVertex(){
+		return verteces.get(verteces.size()-1);
+	}
+	
+	public Edge getLastEdge(){
+		return edges.get(edges.size()-1);
+	}
+	
 }
