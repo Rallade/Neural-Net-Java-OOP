@@ -13,10 +13,12 @@ public class Graph {
 	}
 
 	public int getE() {
+		e = edges.size();
 		return e;
 	}
 
 	public int getV() {
+		v = edges.size();
 		return v;
 	}
 
@@ -36,24 +38,24 @@ public class Graph {
 		verteces.add(new Vertex());
 	}
 	
-	public void creatVertexPair(String label1, String label2){
+	public void creatVertexPair(String label1, String label2, Object weight){
 		Vertex a  = new Vertex(label1);
 		Vertex b = new Vertex(label2);
 		verteces.add(a);
 		verteces.add(b);
-		edges.add(new Edge(a,b));
+		edges.add(new Edge(a,b, weight));
 	}
 	
-	public void creatVertexPair(){
+	public void creatVertexPair(Object weight){
 		Vertex a  = new Vertex();
 		Vertex b = new Vertex();
 		verteces.add(a);
 		verteces.add(b);
-		edges.add(new Edge(a,b));
+		edges.add(new Edge(a,b, weight));
 	}
 	
-	public void link(Vertex a, Vertex b){
-		 edges.add(new Edge(a,b));
+	public void link(Vertex a, Vertex b, Object weight){
+		 edges.add(new Edge(a,b, weight));
 	}
 	
 	public Vertex getLastVertex(){
